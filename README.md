@@ -10,11 +10,11 @@ The **Hiring Assistant Chatbot** is a conversational web application built using
 
 Follow these steps to set up the project locally:
 
-### 1. Clone the Repository
-```bash
+## 1. Clone the Repository
+
 git clone https://github.com/your-username/hiring-assistant-chatbot.git
 cd hiring-assistant-chatbot
-2. Create and Activate Virtual Environment (Optional but Recommended)
+# 2. Create and Activate Virtual Environment (Optional but Recommended)
 bash
 Copy
 Edit
@@ -23,12 +23,12 @@ python -m venv venv
 venv\Scripts\activate
 # On Mac/Linux:
 source venv/bin/activate
-3. Install Required Libraries
+# 3. Install Required Libraries
 bash
 Copy
 Edit
 pip install -r requirements.txt
-4. Set Up Environment Variables
+# 4. Set Up Environment Variables
 Create a .env file in the root directory and add your Hugging Face or OpenAI API key:
 
 env
@@ -36,7 +36,7 @@ Copy
 Edit
 HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_key
 OPENAI_API_KEY=your_openai_api_key
-🚀 Usage Guide
+# 🚀 Usage Guide
 To run the chatbot locally, use the following command:
 
 bash
@@ -55,7 +55,7 @@ Ask questions one at a time in a conversational format
 
 Provide an option to continue or exit
 
-⚙️ Technical Details
+# ⚙️ Technical Details
 Frontend/UI: Streamlit
 
 LLM APIs: OpenAI GPT-3.5/4, HuggingFace Transformers
@@ -72,7 +72,7 @@ dotenv – for managing environment variables
 
 streamlit – for UI interaction
 
-Architecture:
+# Architecture:
 
 chatbot.py handles conversation flow and LLM logic
 
@@ -82,7 +82,7 @@ prompts.py manages reusable prompt templates
 
 utils.py contains helper functions
 
-✍️ Prompt Design
+# ✍️ Prompt Design
 Prompts were designed with the following strategies:
 
 Information Collection Prompts: Simple, natural questions that simulate recruiter behavior
@@ -93,7 +93,7 @@ Fallback Handling: In case of API failure, hardcoded rules are used to generate 
 
 Context-Aware Chat: Maintains state between turns to make the conversation feel smooth and intelligent
 
-🧩 Challenges & Solutions
+# 🧩 Challenges & Solutions
 Challenge	Solution
 API errors like unauthorized or quota exceeded	Added fallback logic to generate predefined questions
 Maintaining conversation state across turns	Built a HiringAssistant class to manage stage-wise logic
@@ -101,6 +101,6 @@ Handling various tech stack inputs	Used normalization and set-based matching
 Designing a real chat-like UI in Streamlit	Used st.session_state and message lists to simulate chat flow
 Avoiding overwhelming the user with all questions at once	Switched to a one-by-one questioning loop
 
-📬 Feedback
+# 📬 Feedback
 If you'd like to suggest improvements or report issues, feel free to open an issue or contact the developer.
 
